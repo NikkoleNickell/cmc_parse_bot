@@ -126,9 +126,7 @@ async def get_coins_menu(msg: Message, state: FSMContext):
     else:
         max2_info = user_data[0]['max2']
 
-    user_coins_info = f'{coins_total}\n{coins[0] if coins else '' } \
-        {min1_info} {max1_info}\n{coins[1] if len(coins)>1 else ''} \
-        {min2_info} {max2_info}'
+    user_coins_info = f'{coins_total}\n{coins[0] if coins else '' } {min1_info} {max1_info}\n{coins[1] if len(coins)>1 else ''} {min2_info} {max2_info}'
 
     
     if coins_total == 0:
