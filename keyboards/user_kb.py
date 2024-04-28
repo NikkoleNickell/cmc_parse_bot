@@ -9,7 +9,6 @@ def gen_btn(list):
     return btn
 
 
-# TODO убрать args ???
 def gen_markup(list_of_btns, *args):
     buttons = []
     for i in list_of_btns:

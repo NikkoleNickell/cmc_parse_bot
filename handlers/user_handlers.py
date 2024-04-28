@@ -46,17 +46,17 @@ async def parse_cmc():
     
     for item in all_users_data:
         if item['min1'] > pairs[item['coin1']]:
-            await bot.send_message(chat_id, f'{item['coin1']} упала ниже '
-            f'вашего минимального значения, текущая стоимость: {round(pairs[item['coin1']], 2)}')
+            await bot.send_message(chat_id, f'{item["coin1"]} упала ниже '
+            f'вашего минимального значения, текущая стоимость: {round(pairs[item["coin1"]], 2)}')
         if item['max1'] < pairs[item['coin1']]:
-            await bot.send_message(chat_id, f'{item['coin1']} поднялась '
-            f'выше вашего максимального значения, текущая стоимость: {round(pairs[item['coin1']], 2)}')
+            await bot.send_message(chat_id, f'{item["coin1"]} поднялась '
+            f'выше вашего максимального значения, текущая стоимость: {round(pairs[item["coin1"]], 2)}')
         if item['min2'] > pairs[item['coin2']]:
-            await bot.send_message(chat_id, f'{item['coin2']} упала ниже '
-            f'вашего минимального значения, текущая стоимость: {round(pairs[item['coin2']], 2)}')
-        if item['max2'] < pairs[item['coin2']]:
-            await bot.send_message(chat_id, f'{item['coin2']} поднялась '
-            f'выше вашего максимального значения, текущая стоимость: {round(pairs[item['coin2']], 2)}')
+            await bot.send_message(chat_id, f'{item["coin2"]} упала ниже '
+            f'вашего минимального значения, текущая стоимость: {round(pairs[item["coin2"]], 2)}')
+        if item['max2'] < pairs[item["coin2"]]:
+            await bot.send_message(chat_id, f'{item["coin2"]} поднялась '
+            f'выше вашего максимального значения, текущая стоимость: {round(pairs[item["coin2"]], 2)}')
 
 
 class FSMCoins(StatesGroup):
